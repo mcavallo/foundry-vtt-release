@@ -1,0 +1,22 @@
+name: "Foundry VTT Release"
+description: "Publishes a Foundry VTT package (module or system) using the Package Release API"
+branding:
+  icon: "package"
+  color: "orange"
+inputs:
+  foundry-release-token:
+    description: "Foundry VTT package release API token"
+    required: true
+  manifest-path:
+    description: "Path to the built manifest file (module.json or system.json)"
+    required: true
+  release-notes-url:
+    description: "URL to the release notes for this version. Derived from the manifest if not provided."
+    required: false
+  skip-dry-run:
+    description: "Skip the dry-run validation before the actual release"
+    required: false
+    default: "false"
+runs:
+  using: "node24"
+  main: "dist/index.js"

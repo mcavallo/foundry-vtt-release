@@ -1,0 +1,26 @@
+{
+  "name": "foundry-vtt-release",
+  "description": "GitHub Action for publishing Foundry VTT packages using the Package Release API",
+  "author": "Mariano Cavallo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcavallo/foundry-vtt-release"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "effect": "^3.16.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.11",
+    "@typescript/native-preview": "^7.0.0-dev.20260329.1",
+    "@vitest/coverage-v8": "^4.1.2",
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0",
+    "rolldown": "^1.0.0-rc.12",
+    "vitest": "^4.1.2"
+  }
+}

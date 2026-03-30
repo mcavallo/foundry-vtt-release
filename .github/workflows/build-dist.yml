@@ -1,0 +1,38 @@
+name: Build dist
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "src/**"
+      - "package.json"
+      - "bun.lock"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build dist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: oven-sh/setup-bun@v2
+
+      - uses: taiki-e/install-action@fd0f63e180a477d7434580b6d80817978b9ff2b8 # v2.70.1
+        with:
+          tool: just
+
+      - run: bun i --frozen-lockfile
+
+      - name: Build
+        run: just build
+
+      - name: Commit dist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          git diff --quiet --cached || git commit -m "chore: build dist" && git push
