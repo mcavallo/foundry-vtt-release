@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/mcavallo/foundry-vtt-release/compare/v1.0.2...v1.0.3) (2026-04-15)
+
+
+### Bug Fixes
+
+* Bump deps ([#7](https://github.com/mcavallo/foundry-vtt-release/issues/7)) ([d41a2c6](https://github.com/mcavallo/foundry-vtt-release/commit/d41a2c69c3495e41b0ab1e8a63098b2b6b863d65))
+
 ## [1.0.2](https://github.com/mcavallo/foundry-vtt-release/compare/v1.0.1...v1.0.2) (2026-04-15)
 
 
