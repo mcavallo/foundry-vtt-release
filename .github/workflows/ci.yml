@@ -10,19 +10,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ci:
-    name: CI
+  checks:
+    name: Checks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - uses: oven-sh/setup-bun@v2
-
-      - uses: taiki-e/install-action@fd0f63e180a477d7434580b6d80817978b9ff2b8 # v2.70.1
-        with:
-          tool: just
-
-      - run: bun i --frozen-lockfile
+      - uses: ./.github/actions/setup
 
       - name: Format check
         run: just format-check
