@@ -49,33 +49,33 @@ describe('formatReleaseErrors', () => {
 
 describe('toUserMessage', () => {
   it('maps InputValidationError', () => {
-    expect(
-      msg({ _tag: 'InputValidationError', message: 'bad token' })
-    ).toBe('Invalid inputs: bad token');
+    expect(msg({ _tag: 'InputValidationError', message: 'bad token' })).toBe(
+      'Invalid inputs: bad token'
+    );
   });
 
   it('maps ManifestNotFoundError', () => {
-    expect(
-      msg({ _tag: 'ManifestNotFoundError', path: '/missing.json' })
-    ).toBe('Manifest not found: /missing.json');
+    expect(msg({ _tag: 'ManifestNotFoundError', path: '/missing.json' })).toBe(
+      'Manifest not found: /missing.json'
+    );
   });
 
   it('maps ManifestParseError', () => {
-    expect(
-      msg({ _tag: 'ManifestParseError', path: '/bad.json' })
-    ).toBe('Manifest is not valid JSON: /bad.json');
+    expect(msg({ _tag: 'ManifestParseError', path: '/bad.json' })).toBe(
+      'Manifest is not valid JSON: /bad.json'
+    );
   });
 
   it('maps ManifestSchemaError', () => {
-    expect(
-      msg({ _tag: 'ManifestSchemaError', issue: 'missing id' })
-    ).toBe('Manifest schema invalid: missing id');
+    expect(msg({ _tag: 'ManifestSchemaError', issue: 'missing id' })).toBe(
+      'Manifest schema invalid: missing id'
+    );
   });
 
   it('maps ApiRequestError', () => {
-    expect(
-      msg({ _tag: 'ApiRequestError', cause: 'network down' })
-    ).toBe('API request failed: network down');
+    expect(msg({ _tag: 'ApiRequestError', cause: 'network down' })).toBe(
+      'API request failed: network down'
+    );
   });
 
   it('maps ApiResponseError', () => {
@@ -85,21 +85,21 @@ describe('toUserMessage', () => {
   });
 
   it('maps ApiResponseSchemaError', () => {
-    expect(
-      msg({ _tag: 'ApiResponseSchemaError', issue: 'bad shape' })
-    ).toBe('Unexpected API response: bad shape');
+    expect(msg({ _tag: 'ApiResponseSchemaError', issue: 'bad shape' })).toBe(
+      'Unexpected API response: bad shape'
+    );
   });
 
   it('maps ApiRateLimitError', () => {
-    expect(
-      msg({ _tag: 'ApiRateLimitError', retryAfter: 30 })
-    ).toBe('Rate limited. Retry after 30s');
+    expect(msg({ _tag: 'ApiRateLimitError', retryAfter: 30 })).toBe(
+      'Rate limited. Retry after 30s'
+    );
   });
 
   it('maps ApiUnauthorizedError', () => {
-    expect(
-      msg({ _tag: 'ApiUnauthorizedError', status: 403 })
-    ).toBe('Unauthorized (HTTP 403). Check your release token.');
+    expect(msg({ _tag: 'ApiUnauthorizedError', status: 403 })).toBe(
+      'Unauthorized (HTTP 403). Check your release token.'
+    );
   });
 
   it('maps ApiReleaseError', () => {
