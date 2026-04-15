@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/mcavallo/foundry-vtt-release/compare/v1.0.1...v1.0.2) (2026-04-15)
+
+
+### Bug Fixes
+
+* Pin action versions. Add setup action ([c872a23](https://github.com/mcavallo/foundry-vtt-release/commit/c872a23e9ac3bc0ea137c705c0fec1a086d78962))
+
 ## [1.0.1](https://github.com/mcavallo/foundry-vtt-release/compare/v1.0.0...v1.0.1) (2026-03-30)
 
 
