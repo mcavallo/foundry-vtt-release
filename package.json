@@ -2,7 +2,7 @@
   "name": "foundry-vtt-release",
   "description": "GitHub Action for publishing Foundry VTT packages using the Package Release API",
   "author": "Mariano Cavallo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "type": "module",
   "license": "MIT",
